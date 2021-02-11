@@ -38,3 +38,7 @@ aside.logo{
 header.header{
     grid-area: header;
 }
+
+footer.footer{
+    grid-area: footer;
+}
