@@ -19,4 +19,22 @@
     margin: 0px;
     display: grid;
     grid-template-columns: var(--aside-width) 1fr;
+    grid-template-rows:
+        var(--header-height)
+        1fr
+        vat(--footer-height);
+   grid-template-areas:
+        "logo header"
+        "menu content"
+        "menu footer";
+   height: 100vh;
+   background-color: #f6f6f6;
+}
+
+aside.logo{
+    grid-area: logo;
+}
+
+header.header{
+    grid-area: header;
 }
