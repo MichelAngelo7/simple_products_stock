@@ -1,0 +1,18 @@
+{
+  "users":[
+      {
+        "id": 1,
+        "name": "michel",
+        "email": "michel@teste.com.br"
+      }
+  
+  ],
+  "products":[
+      {
+          "id": 1,
+          "name": "caneta",
+          "price": 0.35,
+          "amount": 5
+      }
+  ]
+}
