@@ -11,7 +11,7 @@
         0 2px 49px 0 rgba(0, 0, 0, 0.06);
 }
 
-*{
+* {
     box-sizing: border-box;
     font-family: 'Montserrat', 'sans-serif';
 }
@@ -23,7 +23,7 @@
     grid-template-rows:
         var(--header-height)
         1fr
-        vat(--footer-height);
+        var(--footer-height);
    grid-template-areas:
         "logo header"
         "menu content"
