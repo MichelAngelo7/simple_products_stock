@@ -1,14 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default props =>
     <React.Fragment>
-        <a href="#">
+        <Link to='/'>
             <i className="fa fa-home"></i> Início
-        </a>
-        <a href="#">
+        </Link>
+        <Link to="/users">
             <i className="fa fa-users"></i> Usuários
-        </a>
-        <a href="#">
+        </Link>
+        <Link to="/products">
             <i className="fa fa-cubes"></i> Estoque
-        </a>
+        </Link>
     </React.Fragment>

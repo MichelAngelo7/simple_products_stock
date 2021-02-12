@@ -5,7 +5,7 @@ aside.menu-area{
         2px 0 10px 0 rgba(0, 0, 0, 0.09);
 }
 
-.manu a {
+.menu a {
     display: block;
     text-decoration: none;
     color:#fff;
@@ -13,6 +13,7 @@ aside.menu-area{
     padding: 15px;
 }
 
-.manu a:hover{
-   background: linear-gradient(135deg, #07a7e7 0%, #32dac3 100%); 
+.menu a:hover{
+   background: linear-gradient(135deg, #abbaab 0%, #fff 100%);
+   color: #000; 
 }
