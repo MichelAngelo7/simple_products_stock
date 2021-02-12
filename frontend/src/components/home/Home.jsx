@@ -6,5 +6,5 @@ export default props =>
         subtitle="Simple Products Stock">
         <div className="display-4 ">Bem vindo</div>
         <hr />
-        <p className="mb-0"> Sistena de controle de estoque simples, desenvolvido em React-js</p>
+        <p className="mb-0"> Sistema de controle de estoque simples, desenvolvido em React-js</p>
     </Main>

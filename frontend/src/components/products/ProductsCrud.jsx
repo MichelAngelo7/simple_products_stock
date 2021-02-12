@@ -103,11 +103,65 @@ export default class UserCrud extends Component{
             </div>
         )
     }
+
+    load(product){
+        this.setState({ product })
+    }
+
+    remove(product){
+        axios.delete(`${baseUrl}/${product.id}`).then(resp =>{
+            const list = this.getUpdatedList(product, false)
+            this.setState({ list })
+        })
+    }
+
+    renderTable(){
+        return(
+            <table className="table mt-4">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                       {this.renderRows()}
+                </tbody>
+            </table>
+        )
+    }
+
+    renderRows(){
+        return this.state.list.map(product =>{
+            return(
+                <tr key={product.id}>
+                    <td>{product.id}</td>
+                    <td>{product.name}</td>
+                    <td>{product.price}</td>
+                    <td>{product.amount}</td>
+                    <td>
+                        <button className="btn btn-warning"
+                            onClick={ () => this.load(product)}>
+                            <i className="fa fa-pencil"></i>
+                        </button>
+                        <button className="btn btn-danger ml-2"
+                            onClick={ () => this.remove(product)}>
+                            <i className="fa fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            )
+        })
+    }
         
     render(){
         return (
           <Main { ...headerProps}>
             {this.renderForm()}
+            {this.renderTable()}
           </Main>
         )
     }
